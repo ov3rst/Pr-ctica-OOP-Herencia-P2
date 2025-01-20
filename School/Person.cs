@@ -2,15 +2,13 @@
 
 namespace School
 {
-    public abstract class Person : School
+    public abstract class Person : Class
     {
-        protected Person(ICollection<Teacher> teachers) : base(teachers)
+        private string? _name;
+        protected Person(ICollection<Teacher> teachers, string name) : base(teachers)
         {
+            this._name = name;
         }
-
-        public Guid Id { get; set; }
-        public string? Name { get; set; }
-
 
 
         protected virtual void Study()

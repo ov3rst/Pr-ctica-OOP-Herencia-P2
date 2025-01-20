@@ -4,7 +4,7 @@
     {
         private ICollection<Course>? _courses;
 
-        public Teacher(ICollection<Teacher> teachers) : base(teachers)
+        public Teacher(ICollection<Teacher> teachers, string name) : base(teachers, name)
         {
         }
     }

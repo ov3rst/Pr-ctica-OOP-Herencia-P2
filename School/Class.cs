@@ -1,14 +1,14 @@
 ﻿namespace School
 {
-    public class Class
+    public abstract class Class
     {
-        private ICollection<Class>? _classes;
-        private string? _id;
+        private ICollection<Teacher>? _teachers;
+        private string? _classId;
 
-        public Class(ICollection<Class> classes) : base(classes)
+        public Class(ICollection<Teacher> teachers)
         {
-            this._classes = classes;
-            this._id = Guid.NewGuid().ToString();
+            this._teachers = teachers;
+            this._classId = Guid.NewGuid().ToString();
         }
     }
 }
